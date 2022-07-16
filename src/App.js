@@ -15,7 +15,9 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <div className="cryptoHeader"></div>
+      <div className="cryptoHeader">
+        <h1 className="brand">AVAX</h1>
+      </div>
       <div className="cryptoDisplay">
         {listOfCoins.map((coin) => {
           return (

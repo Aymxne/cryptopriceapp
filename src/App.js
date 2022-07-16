@@ -1,4 +1,6 @@
 import "./App.css";
+import React from "react";
+
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import Coin from "./components/Coin";
@@ -6,11 +8,11 @@ function App() {
   const [listOfCoins, setListOfCoins] = useState([]);
 
   useEffect(() => {
-    Axios.get(
-      "https://api.coinstats.app/public/v1/coins?skip=0&limit=100"
-    ).then((response) => {
-      setListOfCoins(response.data.coins);
-    });
+    Axios.get("https://api.coinstats.app/public/v1/coins?skip=0&limit=12").then(
+      (response) => {
+        setListOfCoins(response.data.coins);
+      }
+    );
     console.log("it worked");
   }, []);
   return (
@@ -30,6 +32,8 @@ function App() {
           );
         })}
       </div>
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </div>
   );
 }

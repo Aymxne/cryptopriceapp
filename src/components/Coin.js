@@ -2,7 +2,7 @@ import React from "react";
 
 function Coin({ name, icon, price, symbol }) {
   return (
-    <div className="coin">
+    <div data-aos="zoom-in-down" className="coin">
       <h1 className="coin-name">{name} </h1>
       <img alt="coint img" src={icon} />
       <h3 className="coin-price">{price}</h3>
